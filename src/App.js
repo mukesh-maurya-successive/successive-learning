@@ -1,20 +1,20 @@
 import React from 'react';
 import enTranslations from '@shopify/polaris/locales/en.json';
-import { AppProvider, Button, Card, Layout, Link } from '@shopify/polaris';
-import { AccountConnectionExample, Checkout } from './components';
+import { AppProvider, Card, Link } from '@shopify/polaris';
 import PrivateLayout from './Layout/PrivateLayout';
+import './App.css';
 
 const App = () => {
   return (
-    <div>
+    <div style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/images/background.jpg'})` }}>
       <AppProvider i18n={enTranslations}>
-        <Card title="Checkout">
+        <div className='app'>
+        <Card title='Checkout'>
           <Card.Section>
-          <Link url='https://help.shopify.com/manual'>  Shipping / Payment Method / Confirmation/</Link>
+            <Link url='https://help.shopify.com/manual'> Shipping / Payment Method / Confirmation/</Link>
           </Card.Section>
         </Card>
         <hr />
-        <div>
           <PrivateLayout />
         </div>
       </AppProvider>
