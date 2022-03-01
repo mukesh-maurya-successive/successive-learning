@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, FormLayout, Layout, Stack } from '@shopify/polaris';
+import { Card, Layout} from '@shopify/polaris';
 
 const ImageCard = () => {
   return (
