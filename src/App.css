@@ -1,3 +1,7 @@
 .app{
-  max-width: fit-content;
+  /* max-width: fit-content; */
+  /* margin: 100px; */
+  padding: 30px 50px 5px 50px;
+  /* padding: auto; */
+  /* align-items: center; */
 }

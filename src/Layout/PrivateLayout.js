@@ -1,20 +1,19 @@
 import React from 'react';
-import { Layout, Card } from '@shopify/polaris';
 import { FormFiled, OrderProduct } from '../components/';
 import ImageCard from '../components/ImageCard';
-import { Stack } from '@shopify/polaris';
+import { Stack, TextStyle, ResourceList, ResourceItem, Layout, Card } from '@shopify/polaris';
 const PrivateLayout = () => {
   const OrderItem = [
     { name: 'Mobile Holder', price: 10, color: 'black', image: 'mobile-holder.jpg', quantity: 1 },
     { name: 'Rado Watch', price: 120, color: 'black', image: 'rado.jpg', quantity: 1 },
-    { name: 'C type to MicroConverter', price: 18, color: 'black', image: 'usb-micro.jpeg', quantity: 1 },
+    { name: 'C type to MicroConverter', price: 18, color: 'black', image: 'usb-c-2-micro.jpeg', quantity: 1 },
     { name: 'Mobile Case', price: '10', color: 'black', image: 'hard-case.jpg', quantity: 1 },
   ];
   return (
     <Layout>
       <Layout.Section>
-        <ImageCard />
         <Card>
+          <ImageCard />
           <FormFiled />
         </Card>
       </Layout.Section>
@@ -34,17 +33,36 @@ const PrivateLayout = () => {
               </div>
             ))}
           </Card.Section>
-          <Stack.Item>
-            <Card.Section title='Sub Total'>
-              <p>Shipping</p>
-              <p>Taxes</p>
-            </Card.Section>
-            <hr />
-            <Card.Section
-              title='Total'
-              actions={[{ content: 'Delete', destructive: true }, { content: 'Continue' }]}
-            ></Card.Section>
-          </Stack.Item>
+          <ResourceList
+            items={[1]}
+            renderItem={(item) => {
+              return (
+                <ResourceItem sectioned>
+                  <Stack alignment='center' distribution='equalSpacing'>
+                    <Stack.Item>
+                      <div>Sub Total</div>
+                      <div>Shipping</div>
+                      <div>Taxes</div>
+                    </Stack.Item>
+                    <Stack.Item>
+                      <div>{`$ 230`}</div>
+                      <div>{`$ 12`}</div>
+                      <div>{`$ 99`}</div>
+                    </Stack.Item>
+                  </Stack>
+                  <hr />
+                  <Stack alignment='center' distribution='equalSpacing'>
+                    <Stack.Item>
+                      <div>Total </div>
+                    </Stack.Item>
+                    <Stack.Item>
+                      <div>{`$ 346`} </div>
+                    </Stack.Item>
+                  </Stack>
+                </ResourceItem>
+              );
+            }}
+          />
         </Card>
       </Layout.Section>
     </Layout>
