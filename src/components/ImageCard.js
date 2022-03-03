@@ -12,7 +12,7 @@ const ImageCard = () => {
           return (
             <div>
               <ResourceItem sectioned>
-                <Stack wrap={true} alignment='center' distribution='center' spacing='extraLoose'>
+                <Stack wrap={true} alignment='center' distribution='equalSpacing' spacing='extraLoose'>
                   <Stack.Item>
                     <img alt='' width='200px' height='150px' src='./images/cards/discover.png' />
                   </Stack.Item>

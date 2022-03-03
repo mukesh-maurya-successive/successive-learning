@@ -9,11 +9,10 @@ const FormFiled = () => {
 
   const handleEmailChange = () => {
     setEmail('successive@hotmail.com');
-    // alert(email);
     console.log(email);
   };
   return (
-    <Card title='New Card' sectioned>
+    <Card className="formField" title='New Card' sectioned>
       <hr />
       <Card.Section>
         <Stack wrap={false} alignment='center' distribution='center'>
@@ -42,6 +41,7 @@ const FormFiled = () => {
               <Button fullWidth primary submit>
                 Submit
               </Button>
+              <Card></Card>
             </FormLayout>
           </Form>
         </Stack>
