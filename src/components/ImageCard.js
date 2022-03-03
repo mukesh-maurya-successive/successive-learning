@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, ResourceList, ResourceItem, Stack, Layout, Thumbnail } from '@shopify/polaris';
+import { Card, ResourceList, ResourceItem, Stack } from '@shopify/polaris';
 
 const ImageCard = () => {
   return (

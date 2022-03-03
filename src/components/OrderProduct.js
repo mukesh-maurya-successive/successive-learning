@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Layout, Avatar, ResourceItem, ResourceList, Stack, TextStyle, Thumbnail } from '@shopify/polaris';
+import { Card, ResourceItem, ResourceList, Stack, TextStyle, Thumbnail } from '@shopify/polaris';
 
 const OrderProduct = (props) => {
   return (

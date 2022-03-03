@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormFiled, OrderProduct } from '../components/';
 import ImageCard from '../components/ImageCard';
-import { Stack, TextStyle, ResourceList, ResourceItem, Layout, Card } from '@shopify/polaris';
+import { Stack, ResourceList, ResourceItem, Layout, Card } from '@shopify/polaris';
 const PrivateLayout = () => {
   const OrderItem = [
     { name: 'Mobile Holder', price: 10, color: 'black', image: 'mobile-holder.jpg', quantity: 1 },
