@@ -1,0 +1,4 @@
+.imageCard{
+  display: flexbox;
+  flex-direction: row;
+}
